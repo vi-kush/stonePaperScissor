@@ -34,8 +34,6 @@
 		
 		//Generate Random Choices
 		for ($i=0 ; $i < 4 ; $i++){
-			$ch=rand(0,3);
-			//echo "<br>".$ch."<br>";
 	    $player[$i] = $choices[rand(0,2)];
 		}
 
@@ -48,9 +46,7 @@
         <th scope="col">Player 3</th>
         <th scope="col">Player 4</th>
       </tr>
-    </thead>';
-		//print_r($player);
-		echo '
+    </thead>
     <tbody>
     <tr>
       <td>'.$player[0].'</td>
@@ -85,41 +81,20 @@
     </thead>
     <tbody>';
     
+    for($k=1 ; $k<5 ; ++$k){
+    echo '<tr>';
+    if ($k==1) {
+      echo '<th scope="row" rowspan="5">Wins</th>';
+    }
     echo '
-      <tr>
-        <th scope="row" rowspan="5">Wins</th>
-        <th Scope="row" style="background-color: rgb(255, 230, 197)">Player 1</th>
-        <td>'.$totalScore['player1']['player1'].'</td>
-        <td>'.$totalScore['player1']['player2'].'</td>
-        <td>'.$totalScore['player1']['player3'].'</td>
-        <td>'.$totalScore['player1']['player4'].'</td>
-      </tr>
-      <tr>
-        <th Scope="row" style="background-color: rgb(255, 230, 197)">Player 2</th>
-        <td>'.$totalScore['player2']['player1'].'</td>
-        <td>'.$totalScore['player2']['player2'].'</td>
-        <td>'.$totalScore['player2']['player3'].'</td>
-        <td>'.$totalScore['player2']['player4'].'</td>
-      </tr>
-      <tr>
-        <th scope="row" style="background-color: rgb(255, 230, 197)">Player 3</th>
-        <td>'.$totalScore['player3']['player1'].'</td>
-        <td>'.$totalScore['player3']['player2'].'</td>
-        <td>'.$totalScore['player3']['player3'].'</td>
-        <td>'.$totalScore['player3']['player4'].'</td>
-      </tr>
-      <tr>
-        <th scope="row" style="background-color: rgb(255, 230, 197)">Player 4</th>
-        <td>'.$totalScore['player4']['player1'].'</td>
-        <td>'.$totalScore['player4']['player2'].'</td>
-        <td>'.$totalScore['player4']['player3'].'</td>
-        <td>'.$totalScore['player4']['player4'].'</td>
-      </tr>
-    </tbody>
-  </table>';
-		//print_r($totalScore);
-		echo "<br><hr>";
-
+        <th Scope="row" style="background-color: rgb(255, 230, 197)">Player '.$k.'</th>
+        <td>'.$totalScore['player'.$k]['player1'].'</td>
+        <td>'.$totalScore['player'.$k]['player2'].'</td>
+        <td>'.$totalScore['player'.$k]['player3'].'</td>
+        <td>'.$totalScore['player'.$k]['player4'].'</td>
+      </tr>';
+    }
+    echo '</table><br><hr>';
 		$iteration++;
 	}	
 
