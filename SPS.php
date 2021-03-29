@@ -1,47 +1,26 @@
 <?php
 	//Compare Results [player][against]
 	// 0 => Tie , 1 => Win , -1 => Lose
-	$result=Array("stone" => Array("stone" => 0,
-				      									 "paper" => -1,
-				      									 "scissor"=> 1),
-		  			    "paper" => Array("stone" => 1,
-		  			    		  				    "paper" => 0,
-						 	    						  "scissor" => -1),
-		  			    "scissor" => Array("stone" => -1,
-						     	       				  "paper" => 1,
-						 	                    "scissor" => 0)
-				);
+	$result=Array("stone" => Array("stone" => 0, "paper" => -1, "scissor"=> 1),
+		  			    "paper" => Array("stone" => 1, "paper" => 0, "scissor" => -1),
+		  			    "scissor" => Array("stone" => -1, "paper" => 1, "scissor" => 0));
 
 	//To accumulate Wins [of_player][against_player]
-	$totalScore = Array( "player1" => Array("player1" => '-',
-																				  "player2" => 0,
-																				  "player3" => 0,
-																				  "player4" => 0),	
-    								   "player2" => Array("player1" => 0,
-										  										"player2" => '-',
-										  										"player3" => 0,
-										  										"player4" => 0),
-			    					  	"player3" => Array("player1" => 0,
-										  									   "player2" => 0,
-										  									   "player3" => '-',
-										  									   "player4" => 0),
-			    					    "player4" => Array("player1" => 0,
-											 										 "player2" => 0,
-											 										 "player3" => 0,
-											 										 "player4" => '-')
-			  );					
+	$totalScore = Array("player1" => Array("player1" => '-',"player2" => 0,"player3" => 0,"player4" => 0),	
+ 											"player2" => Array("player1" => 0,"player2" => '-',"player3" => 0,"player4" => 0),
+ 											"player3" => Array("player1" => 0,"player2" => 0,"player3" => '-',"player4" => 0),
+ 											"player4" => Array("player1" => 0,"player2" => 0,"player3" => 0,"player4" => '-'));					
 
-	//Create choices and Player Array To assign values 
-	//Generate Random Choices
-	
+	//Create choices and Player Array to take generated values 
 	$choices = Array( "stone" , "paper" , "scissor" );
 	$indexToPlayer = Array("player1" , "player2" , "player3" , "player4"); 
 	$player = Array();
-
+	
 	$iteration = 0;
-
+	
 	while($iteration <50){
 		
+		//Generate Random Choices
 		for ($i=0 ; $i < 4 ; $i++){
 						$ch=rand(0,3);
 						//echo "<br>".$ch."<br>";
