@@ -39,9 +39,9 @@
 	    $player[$i] = $choices[rand(0,2)];
 		}
 
-		echo '
-    <table class="table">
-    <thead class="thead-dark">
+		echo '<div class="text-center"><h3>Iteration: '.($iteration+1).'</h3></div>
+    <table class="table text-center">
+    <thead class="" style="background-color: rgb(255, 230, 197)">
       <tr>
         <th scope="col">Player 1</th>
         <th scope="col">Player 2</th>
@@ -70,15 +70,13 @@
 		}
 
 		echo '
-    <table class="table">
-    <thead class="thead-light">
+    <table class="table text-center table-bordered " style="width: 80%; margin-left: 10%  ;">
+    <thead class="">
       <tr>
-        <th scope="col"></th>
-        <th scope="col" colspan="5" class="justify-content-center">Against</th>
+        <th scope="col" colspan="6" >Against</th>
       </tr>
-      <tr>
-        <th scope="col"></th>
-        <th scope="col"></th>
+      <tr style="background-color: rgb(255, 230, 197)">
+        <th scope="col" colspan="2" style="background-color: rgb(255, 255, 255)"> </th>
         <th scope="col">Player 1 </th>
         <th scope="col">Player 2 </th>
         <th scope="col">Player 3 </th>
@@ -90,28 +88,28 @@
     echo '
       <tr>
         <th scope="row" rowspan="5">Wins</th>
-        <th Scope="row">Player 1</th>
+        <th Scope="row" style="background-color: rgb(255, 230, 197)">Player 1</th>
         <td>'.$totalScore['player1']['player1'].'</td>
         <td>'.$totalScore['player1']['player2'].'</td>
         <td>'.$totalScore['player1']['player3'].'</td>
         <td>'.$totalScore['player1']['player4'].'</td>
       </tr>
       <tr>
-        <th Scope="row">Player 2</th>
+        <th Scope="row" style="background-color: rgb(255, 230, 197)">Player 2</th>
         <td>'.$totalScore['player2']['player1'].'</td>
         <td>'.$totalScore['player2']['player2'].'</td>
         <td>'.$totalScore['player2']['player3'].'</td>
         <td>'.$totalScore['player2']['player4'].'</td>
       </tr>
       <tr>
-        <th scope="row">Player 3</th>
+        <th scope="row" style="background-color: rgb(255, 230, 197)">Player 3</th>
         <td>'.$totalScore['player3']['player1'].'</td>
         <td>'.$totalScore['player3']['player2'].'</td>
         <td>'.$totalScore['player3']['player3'].'</td>
         <td>'.$totalScore['player3']['player4'].'</td>
       </tr>
       <tr>
-        <th scope="row">Player 4</th>
+        <th scope="row" style="background-color: rgb(255, 230, 197)">Player 4</th>
         <td>'.$totalScore['player4']['player1'].'</td>
         <td>'.$totalScore['player4']['player2'].'</td>
         <td>'.$totalScore['player4']['player3'].'</td>
