@@ -1,6 +1,7 @@
 >THANKS FOR CHECKING OUT :)
 
--------------------------------Stone Paper Scissor-----------------------------
+
+-------------------------------STONE PAPER SCISSOR-----------------------------
 
 Rules -
 ● Paper beats Rock
